@@ -1,0 +1,16 @@
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\DemoNetConf.csprojAssemblyReference.cache
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\App.xaml.g.cs
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\CV\EntryView.xaml.g.cs
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\Views\SplashAnimation.xaml.g.cs
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\DemoNetConf.AssemblyInfoInputs.cache
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\DemoNetConf.AssemblyInfo.cs
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\DemoNetConf.csproj.CoreCompileInputs.cache
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\bin\Debug\netstandard2.0\DemoNetConf.deps.json
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\bin\Debug\netstandard2.0\DemoNetConf.dll
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\bin\Debug\netstandard2.0\ref\DemoNetConf.dll
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\bin\Debug\netstandard2.0\DemoNetConf.pdb
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\DemoNetConf.dll
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\ref\DemoNetConf.dll
+C:\Net\DemoNetConf\DemoNetConf\DemoNetConf\obj\Debug\netstandard2.0\DemoNetConf.pdb

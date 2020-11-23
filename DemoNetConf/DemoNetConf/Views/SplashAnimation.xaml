@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoNetConf.Views.SplashAnimation"
+             NavigationPage.HasNavigationBar="False">
+    <ContentPage.Content>
+        <Grid>
+            <Image x:Name="splashImage" Source="splasscreen.png" HorizontalOptions="Fill" VerticalOptions="Fill" Aspect="AspectFill"/>
+            <Label x:Name="etiquetaSplash" Text="Foodybite" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" FontSize="35" TextColor="#3E3F68" Opacity="0" Scale="50"/>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DemoNetConf.CV.EntryView"
+             xmlns:cv="clr-namespace:DemoNetConf.CV">
+  <ContentView.Content>
+        <Grid RowDefinitions="Auto,Auto">
+            <Label x:Name="etiquetainfo" FontSize="Small" HorizontalOptions="Start" VerticalOptions="Center" TextColor="White" Opacity="0"/>
+            <Frame x:Name="border" Grid.Row="1" BackgroundColor="Transparent" Padding="0" BorderColor="Transparent" IsClippedToBounds="True" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+                <Grid VerticalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"/>
+                        <ColumnDefinition />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.ColumnSpan="2" Source="backgroudEntry.png" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Aspect="AspectFill"/>
+                    <Image x:Name="iconEntry" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" Margin="15,0,0,0" WidthRequest="20"/>
+                    <cv:EntryCustom Grid.Column="1"  x:Name="entryControl" HorizontalOptions="FillAndExpand" Margin="10,0" VerticalOptions="CenterAndExpand" FontSize="Body"/>
+                    <Label x:Name="etiquetaError" Grid.Row="1" Grid.ColumnSpan="2" HorizontalOptions="Start" VerticalOptions="Center" FontSize="Small" TextColor="Red"/>
+                </Grid>
+            </Frame>
+        </Grid>
+    </ContentView.Content>
+</ContentView>

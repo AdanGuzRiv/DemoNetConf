@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "NTWIAwsF1uB55cv6AkSQC0nKIjoPPpFHBmnOT3O8BlEjAlc3H+68gdiHqeja3hD8PgR+eDXKpXWyMao4sqrvcA==",
+  "success": true,
+  "projectFilePath": "C:\\Net\\DemoNetConf\\DemoNetConf\\DemoNetConf.iOS\\DemoNetConf.iOS.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dany_\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\dany_\\.nuget\\packages\\xamarin.forms\\4.8.0.1451\\xamarin.forms.4.8.0.1451.nupkg.sha512"
+  ],
+  "logs": []
+}

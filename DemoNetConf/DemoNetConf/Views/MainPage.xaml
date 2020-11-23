@@ -1,0 +1,96 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             NavigationPage.HasNavigationBar="False"
+             xmlns:controlPersonalizado="clr-namespace:DemoNetConf.CV"
+             xmlns:CV="clr-namespace:DemoNetConf.CV"
+             x:Class="DemoNetConf.MainPage"
+             xmlns:VM="clr-namespace:DemoNetConf.Core.ViewModel"
+             BackgroundImageSource="loginbackground">
+    <ContentPage.BindingContext>
+        <VM:MainViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+
+    <Grid>
+        <Grid RowDefinitions="*,2*,.3*" ColumnDefinitions=".1*,*,.1*" >
+            <Label Grid.Column="1" Text="Foodybite" TextColor="White" FontSize="35" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold"/>
+            <StackLayout Grid.Row="1" Grid.Column="1" VerticalOptions="End" Spacing="15">
+                <CV:EntryView x:Name="mailUser" IconEntryControl="mail.png" VerticalOptions="Center" TextEntryColorControl="White" PlaceHolderColorControl="White" PlaceHolderTextControl="Email"/>
+                <CV:EntryView IconEntryControl="password.png" VerticalOptions="Center" TextEntryColorControl="White" PlaceHolderColorControl="White" PlaceHolderTextControl="Password" IsPasswordEntry="True">
+                    <CV:EntryView.Style>
+                        <Style TargetType="{x:Type CV:EntryView}">
+                            <Style.Triggers>
+                                <DataTrigger TargetType="CV:EntryView" Binding="{Binding Source={x:Reference mailUser}, Path=TextEntryControl}" Value="">
+                                    <Setter Property="IsEnabled" Value="False"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </CV:EntryView.Style>
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity" Value=".5"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity" Value="1"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </CV:EntryView>
+                <Button HorizontalOptions="End" VerticalOptions="Center" Text="Forgot Password?" TextColor="White" FontAttributes="None" FontSize="Body" BackgroundColor="Transparent" Command="{Binding ShowPanelsCommand}" CommandParameter="Email"/>
+            </StackLayout>
+            <Grid Grid.Row="3" Grid.Column="1" VerticalOptions="FillAndExpand" RowDefinitions="Auto, .05*,.5*">
+                <Button CornerRadius="10" HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="Login" TextColor="White" BackgroundColor="#5663FF" Command="{Binding ShowErrorCommand}" >
+                    <VisualStateManager.VisualStateGroups>
+                        <VisualStateGroup x:Name="CommonStates">
+                            <VisualState x:Name="Disabled">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity" Value=".5"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                            <VisualState x:Name="Normal">
+                                <VisualState.Setters>
+                                    <Setter Property="Opacity" Value="1"/>
+                                </VisualState.Setters>
+                            </VisualState>
+                        </VisualStateGroup>
+                    </VisualStateManager.VisualStateGroups>
+                </Button>
+                <StackLayout Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="Create New Account" TextColor="White"  HorizontalOptions="Center" VerticalOptions="Center" FontSize="Small"/>
+                    <BoxView HeightRequest="1" Opacity=".5" BackgroundColor="White" HorizontalOptions="FillAndExpand"/>
+                </StackLayout>
+            </Grid>
+            <BoxView Grid.RowSpan="4" Grid.ColumnSpan="3" BackgroundColor="White" Opacity=".7" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" IsVisible="False"/>
+            <!--<CV:MessageView x:Name="modalControl" Scale="0" Grid.ColumnSpan="3" Grid.RowSpan="4" HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding ShowModal}" TextMessage="{Binding TextoModal}" ClickCommand="{Binding HiddenErrorCommand}"/>-->
+        </Grid>
+        <Grid RowDefinitions="Auto,.1*,Auto,*,*" ColumnDefinitions=".1*,*,.1*" IsVisible="False">
+            <Grid Grid.Column="1" RowDefinitions="Auto,*" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0,10">
+                <ImageButton Source="back.png" HorizontalOptions="Start" VerticalOptions="Center" Aspect="AspectFit" BackgroundColor="Transparent"/>
+                <Label Grid.ColumnSpan="2" Text="Forgot Password" HorizontalOptions="Center" VerticalOptions="Center" FontAttributes="Bold" TextColor="White" FontSize="Medium"/>
+            </Grid>
+            <Label Grid.Row="2" Grid.Column="1" Text="Enter your email and will send you instructions on how to reset it" HorizontalTextAlignment="Center" LineBreakMode="WordWrap" FontSize="Medium" FontAttributes="Italic"/>
+            <CV:EntryView x:Name="mailEntry" Grid.Row="3" Grid.Column="1" IconEntryControl="mail" PlaceHolderTextControl="Email" PlaceHolderColorControl="White" TextEntryColorControl="White"/>
+            <Button Grid.Row="4" Grid.Column="1"  HorizontalOptions="FillAndExpand" VerticalOptions="Center" Text="Send" Command="{Binding ShowErrorCommand}">
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="Disabled">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity" Value=".5"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="Normal">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity" Value="1"/>
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+            </Button>
+        </Grid>
+    </Grid>
+</ContentPage>
